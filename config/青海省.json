@@ -1,0 +1,15 @@
+{
+  "name": "Qinghai",
+  "url": "https://wsjkw.qinghai.gov.cn/zhxw/xwzx/index.html",
+  "parser_name": "title_in_attr_href_in_attr",
+  "search_path": [
+    {
+      "name": "li",
+      "class_": "line01"
+    },
+    {
+      "name": "a",
+      "target": "_blank"
+    }
+  ]
+}

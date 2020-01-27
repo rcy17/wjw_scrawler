@@ -1,0 +1,14 @@
+{
+  "name": "Fujian",
+  "url": "http://wjw.fujian.gov.cn/xxgk/gzdt/wsjsyw/",
+  "parser_name": "title_in_attr_href_in_attr",
+  "search_path": [
+    {
+      "name": "div",
+      "class_": "xxgksublist"
+    },
+    {
+      "name": "a"
+    }
+  ]
+}

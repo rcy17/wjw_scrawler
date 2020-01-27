@@ -14,5 +14,5 @@ class PrintReporter(BasicReporter):
         pass
 
     def process(self, messages):
-        print(f'[{datetime.now()}] new messages:{messages}')
+        print(f'[{datetime.now()}] get {len(messages)} new messages:{messages}')
 

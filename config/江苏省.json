@@ -1,0 +1,14 @@
+{
+  "name": "Jiangsu",
+  "url": "http://wjw.jiangsu.gov.cn/",
+  "parser_name": "title_in_attr_href_in_attr",
+  "search_path": [
+    {
+      "name": "ul",
+      "class_": "sy_01_list"
+    },
+    {
+      "name": "a"
+    }
+  ]
+}

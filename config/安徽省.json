@@ -1,0 +1,14 @@
+{
+  "name": "Anhui",
+  "url": "http://wjw.ah.gov.cn/news_list_450_1.html",
+  "parser_name": "title_in_text_href_in_attr",
+  "search_path": [
+    {
+      "name": "div",
+      "class_": "list"
+    },
+    {
+      "name": "a"
+    }
+  ]
+}

@@ -22,7 +22,7 @@ def title_in_text_href_in_attr(host, node):
     <a href="/related_url">the title</a>
     """
     return {
-        'title': node.text,
+        'title': node.text.replace('\n', ' ').strip(),
         'url': urljoin(host, node.get('href')),
     }
 

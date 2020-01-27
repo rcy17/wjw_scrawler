@@ -1,0 +1,14 @@
+{
+  "name": "Hainan",
+  "url": "http://www.hainan.gov.cn/hainan/5309/list3.shtml",
+  "parser_name": "title_in_text_href_in_attr",
+  "search_path": [
+    {
+      "name": "div",
+      "class_": "list-right_title"
+    },
+    {
+      "name": "a"
+    }
+  ]
+}

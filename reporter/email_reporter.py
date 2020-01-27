@@ -31,7 +31,7 @@ class EmailReporter(BasicReporter):
         server = SMTP_SSL('smtp.163.com')
         server.ehlo()
         server.login(self.account['username'], self.account['password'])
-        message = '<br>'.join(f'{index}. {name}: <a href={msg["url"]}>{msg["title"]}</a>'
+        message = '<br>'.join(f'{index + 1}. {name}: <a href={msg["url"]}>{msg["title"]}</a>'
                               for index, (name, [msg]) in enumerate(messages.items()))
         for receiver in self.receivers:
             try:

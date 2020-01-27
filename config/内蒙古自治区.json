@@ -1,0 +1,14 @@
+{
+  "name": "InnerMongolia",
+  "url": "http://wjw.nmg.gov.cn/xwzx/xwfb/index.shtml",
+  "parser_name": "title_in_attr_href_in_attr",
+  "search_path": [
+    {
+      "name": "div",
+      "class_": "g_xwfbli"
+    },
+    {
+      "name": "a"
+    }
+  ]
+}

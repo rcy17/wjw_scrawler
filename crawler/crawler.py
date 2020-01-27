@@ -7,6 +7,7 @@ A Basic Crawler class to crawl a web
 import asyncio
 from functools import reduce
 from json import load, dump
+from sys import stderr
 
 from bs4 import BeautifulSoup
 from aiohttp import ClientSession
@@ -17,10 +18,13 @@ from crawler import parser
 HEADERS = {
     'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko)'
                   ' Chrome/79.0.3945.130 Safari/537.36',
-    # Notice that this Cookie should be set yourself from http://wsjkw.sh.gov.cn/xwfb/index.html
-    'Cookie': 'yd_cookie=c6096110-c26b-4c3581281477797ad0fbdd56abe9b936212e; '
-              '_ydclearance=a43ea12c7640667d8d534471-37e3-4967-9331-98fc4c25b5ec-1580139274'
+    'Cookie': ''
 }
+
+# Notice that this Cookie should be set yourself from http://wsjkw.sh.gov.cn/xwfb/index.html
+HEADERS['Cookie'] += 'zh_choose=s; yd_cookie=9a475db3-b09d-44ef1d81b3ebdbf2bb7e86072c9481146e5c; ' \
+                     '_ydclearance=b37f6b4ed308a0164303b39a-b7fa-4e28-95cf-40ec5d53a2c9-1580154047; ' \
+                     'AlteonP=APXcZGHbHKwaO05Bt9EfFA$$; zh_choose=s'
 
 
 class Crawler:
@@ -39,20 +43,24 @@ class Crawler:
 
     async def run(self):
         async with ClientSession(headers=HEADERS) as session:
-            async with session.get(self.url, timeout=30) as response:
-                # get data first
-                data = await response.read()
+            try:
+                async with session.get(self.url, timeout=30, verify_ssl=False) as response:
+                    # get data first
+                    data = await response.read()
+            except Exception as e:
+                print('[ERROR]', type(e), e)
+                return
         # Now serialize by Beautiful Soup with the given path
 
         soup = BeautifulSoup(data.decode(detect(data)['encoding']), 'lxml')
         try:
             node = reduce(lambda past, info: past.find(**info), self.search_path, soup)
         except AttributeError:
-            print('Fail to serialize', self.url)
+            print('[CRITICAL] Fail to serialize', self.url, file=stderr)
             return
         parse_function = getattr(parser, self.parser, None)
         if parse_function is None:
-            print('[WARNING]', self.name, 'has no parser')
+            print('[WARNING]', self.name, 'has no parser', file=stderr)
             return
         # Parse newest news title and url
         result = parse_function(self.url, node)

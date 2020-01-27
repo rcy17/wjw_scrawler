@@ -1,0 +1,14 @@
+{
+  "name": "Ningxia",
+  "url": "http://wsjkw.nx.gov.cn/xwzx1/gzdt.htm",
+  "parser_name": "title_in_text_href_in_attr",
+  "search_path": [
+    {
+      "name": "div",
+      "class_": "sub2"
+    },
+    {
+      "name": "a"
+    }
+  ]
+}

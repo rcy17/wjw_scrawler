@@ -1,0 +1,14 @@
+{
+  "name": "Xinjiang",
+  "url": "http://www.xjhfpc.gov.cn/xwzx/xydt.htm",
+  "parser_name": "title_in_attr_href_in_attr",
+  "search_path": [
+    {
+      "name": "div",
+      "class_": "neirong"
+    },
+    {
+      "name": "a"
+    }
+  ]
+}

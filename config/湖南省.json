@@ -1,0 +1,14 @@
+{
+  "name": "Hunan",
+  "url": "http://wjw.hunan.gov.cn/wjw/index.html",
+  "parser_name": "title_in_attr_href_in_attr",
+  "search_path": [
+    {
+      "name": "div",
+      "class_": "list"
+    },
+    {
+      "name": "a"
+    }
+  ]
+}

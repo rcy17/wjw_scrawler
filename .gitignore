@@ -1,3 +1,6 @@
+# email.json shuoldn't change after init
+email.json
+
 # pycharm setting file
 .idea/
 

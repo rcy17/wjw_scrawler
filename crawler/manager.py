@@ -49,7 +49,7 @@ class Manger:
             loop.run_until_complete(asyncio.gather(*tasks))
             stop = datetime.now()
             if self.debug:
-                print('All crawlers cost', (stop-start).total_seconds(), 'seconds')
+                print(f'[{datetime.now()}] All crawlers cost', (stop-start).total_seconds(), 'seconds')
         except Exception as e:
             print(e)
         self._processor(self._messages)

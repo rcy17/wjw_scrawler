@@ -1,0 +1,19 @@
+{
+  "山西": {
+    "name": "shanxi",
+    "url": "http://wjw.shanxi.gov.cn/",
+    "parser": "title_in_attr_href_in_attr",
+    "search_path": [
+      {
+        "name": "div",
+        "class_": "news_box"
+      },
+      {
+        "name": "li"
+      },
+      {
+        "name": "a"
+      }
+    ]
+  }
+}

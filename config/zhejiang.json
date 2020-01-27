@@ -1,0 +1,22 @@
+{
+  "浙江": {
+    "name": "zhejiang",
+    "url": "http://www.zjwjw.gov.cn/",
+    "parser": "title_in_attr_href_in_attr",
+    "search_path": [
+      {
+        "name": "div",
+        "class_": "gzdt_list hide"
+      },
+      {
+        "name": "div"
+      },
+      {
+        "name": "div"
+      },
+      {
+        "name": "a"
+      }
+    ]
+  }
+}

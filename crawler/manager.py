@@ -47,6 +47,8 @@ class Manger:
         for key in keys:
             if key in title:
                 return True
+        if self.debug:
+            print('Ignore title:', title)
         return False
 
     def add_message(self, source, message):

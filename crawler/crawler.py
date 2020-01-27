@@ -35,7 +35,7 @@ class Crawler:
 
     async def run(self):
         async with ClientSession(headers=HEADERS) as session:
-            async with session.get(self.url) as response:
+            async with session.get(self.url, timeout=30) as response:
                 # get data first
                 data = await response.read()
         # Now serialize by Beautiful Soup with the given path
@@ -58,7 +58,7 @@ class Crawler:
         # If this is not recorded, save and report it
         self.record = result
         dump(result, open(self.path, 'w', encoding='utf-8'), ensure_ascii=False)
-        print(self.manager.add_message(self.name, result))
+        self.manager.add_message(self.name, result)
 
     def get_task(self):
         return asyncio.ensure_future(self.run())

@@ -8,7 +8,8 @@ Here defines BasicReporter, which is an abstract class
 
 class BasicReporter:
     def __call__(self, messages):
-        return self.process(messages)
+        if messages:
+            return self.process(messages)
 
     def process(self, messages):
         """

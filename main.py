@@ -1,5 +1,5 @@
 """
-Entry
+Program entry
 
 @Author : rcy17
 @Date   : 2020/1/27
@@ -13,7 +13,7 @@ DEBUG = True
 
 
 def main():
-    manager = Manger(processor=reporter.PrintReporter(debug=DEBUG), debug=DEBUG)
+    manager = Manger(processor=reporter.EmailReporter(debug=DEBUG), debug=DEBUG)
     manager.load_config_info()
     while True:
         # once per minute

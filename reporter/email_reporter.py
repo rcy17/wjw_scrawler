@@ -7,7 +7,7 @@ Here defines EmailReporter, which send email from a given 163 email
 from json import load
 from getpass import getpass
 from datetime import datetime
-from smtplib import SMTP
+from smtplib import SMTP_SSL
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
@@ -28,17 +28,18 @@ class EmailReporter(BasicReporter):
         self.receivers = config['to']
 
     def process(self, messages):
-        server = SMTP('smtp.163.com')
+        server = SMTP_SSL('smtp.163.com')
+        server.ehlo()
         server.login(self.account['username'], self.account['password'])
         message = '<br>'.join(f'{index}. {name}: <a href={msg["url"]}>{msg["title"]}</a>'
                               for index, (name, [msg]) in enumerate(messages.items()))
         for receiver in self.receivers:
             try:
+                # construct a html message
                 msg = MIMEMultipart()
                 msg['From'] = self.account['username']
                 msg['To'] = receiver
                 msg['Subject'] = '卫健委新闻更新'
-                # msg.set_content(message)
                 content = MIMEText(message, 'html', 'utf-8')
                 msg.attach(content)
                 server.send_message(msg)

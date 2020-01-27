@@ -17,6 +17,7 @@ from crawler import parser
 HEADERS = {
     'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko)'
                   ' Chrome/79.0.3945.130 Safari/537.36',
+    # Notice that this Cookie should be set yourself from http://wsjkw.sh.gov.cn/xwfb/index.html
     'Cookie': 'yd_cookie=c6096110-c26b-4c3581281477797ad0fbdd56abe9b936212e; '
               '_ydclearance=a43ea12c7640667d8d534471-37e3-4967-9331-98fc4c25b5ec-1580139274'
 }

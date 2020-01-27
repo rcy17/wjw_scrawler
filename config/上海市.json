@@ -1,0 +1,14 @@
+{
+  "name": "Shanghai",
+  "url": "http://wsjkw.sh.gov.cn/xwfb/index.html",
+  "parser_name": "title_in_attr_href_in_attr",
+  "search_path": [
+    {
+      "name": "ul",
+      "class_": "uli16"
+    },
+    {
+      "name": "a"
+    }
+  ]
+}

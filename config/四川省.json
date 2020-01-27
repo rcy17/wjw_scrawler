@@ -1,0 +1,14 @@
+{
+  "name": "Sichuan",
+  "url": "http://wsjkw.sc.gov.cn/scwsjkw/gzbd01/ztwzlmgl.shtml",
+  "parser_name": "title_in_text_href_in_attr",
+  "search_path": [
+    {
+      "name": "div",
+      "class_": "wy_zt_ygzl"
+    },
+    {
+      "name": "a"
+    }
+  ]
+}

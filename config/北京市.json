@@ -1,0 +1,14 @@
+{
+  "name": "Beijing",
+  "url": "http://wjw.beijing.gov.cn/",
+  "parser_name": "title_in_attr_href_in_attr",
+  "search_path": [
+    {
+      "name": "div",
+      "class_": "wenhua_left_consy_line_text_syx"
+    },
+    {
+      "name": "a"
+    }
+  ]
+}

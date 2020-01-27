@@ -1,7 +1,7 @@
 {
-  "name": "shanxi",
+  "name": "Shanxi",
   "url": "http://wjw.shanxi.gov.cn/",
-  "parser": "title_in_attr_href_in_attr",
+  "parser_name": "title_in_attr_href_in_attr",
   "search_path": [
     {
       "name": "div",

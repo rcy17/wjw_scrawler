@@ -1,7 +1,7 @@
 {
-  "name": "zhejiang",
+  "name": "Zhejiang",
   "url": "http://www.zjwjw.gov.cn/",
-  "parser": "title_in_attr_href_in_attr",
+  "parser_name": "title_in_attr_href_in_attr",
   "search_path": [
     {
       "name": "div",

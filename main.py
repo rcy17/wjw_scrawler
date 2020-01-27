@@ -7,13 +7,13 @@ Entry
 import time
 
 from crawler.manager import Manger
-from reporter import EmailReporter
+import reporter
 
 DEBUG = True
 
 
 def main():
-    manager = Manger(processor=EmailReporter(debug=DEBUG), debug=DEBUG)
+    manager = Manger(processor=reporter.PrintReporter(debug=DEBUG), debug=DEBUG)
     manager.load_config_info()
     while True:
         # once per minute

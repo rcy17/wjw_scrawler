@@ -1,0 +1,14 @@
+{
+  "name": "Hebei",
+  "url": "http://www.hebwst.gov.cn/index.do?templet=new_list&cid=14",
+  "parser_name": "title_in_attr_href_in_attr",
+  "search_path": [
+    {
+      "name": "td",
+      "class_": "sy_new_list"
+    },
+    {
+      "name": "a"
+    }
+  ]
+}

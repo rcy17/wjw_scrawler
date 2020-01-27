@@ -1,0 +1,14 @@
+{
+  "name": "Guangdong",
+  "url": "http://wsjkw.gd.gov.cn/zwyw_yqxx/index.html",
+  "parser_name": "title_in_attr_href_in_attr",
+  "search_path": [
+    {
+      "name": "div",
+      "class_": "section"
+    },
+    {
+      "name": "a"
+    }
+  ]
+}

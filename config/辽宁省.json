@@ -1,0 +1,14 @@
+{
+  "name": "Shanghai",
+  "url": "http://wsjk.ln.gov.cn/wst_wsjskx/",
+  "parser_name": "title_in_text_href_in_attr",
+  "search_path": [
+    {
+      "name": "div",
+      "class_": "jgsz_right_con"
+    },
+    {
+      "name": "a"
+    }
+  ]
+}

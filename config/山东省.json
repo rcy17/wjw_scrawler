@@ -1,0 +1,14 @@
+{
+  "name": "Shandong",
+  "url": "http://wsjkw.shandong.gov.cn/wzxxgk/zwgg/",
+  "parser_name": "title_in_text_href_in_attr",
+  "search_path": [
+    {
+      "name": "div",
+      "class_": "news-list"
+    },
+    {
+      "name": "a"
+    }
+  ]
+}

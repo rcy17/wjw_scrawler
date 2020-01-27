@@ -10,6 +10,9 @@ from .basic_reporter import BasicReporter
 
 
 class PrintReporter(BasicReporter):
+    def __init__(self, **kwargs):
+        pass
+
     def process(self, messages):
         print(f'[{datetime.now()}] new messages:{messages}')
 

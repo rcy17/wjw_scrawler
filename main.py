@@ -5,45 +5,16 @@ Entry
 @Date   : 2020/1/27
 """
 import time
-from datetime import datetime
-from json import load
-from pathlib import Path
 
 from crawler.manager import Manger
+from reporter import EmailReporter
 
-
-def process_messages(messages):
-    """
-    Here we get all updated messages and report them
-    Now report method hasn't finished yet, just print it
-    Maybe we can consider using SMTP or wechat bot
-
-    :param messages: {<name:str>: [{'title': <title:str>, 'url': <url:str>}, ...], ...}
-    :return: None
-    """
-    print(f'[{datetime.now()}] new messages: {messages}')
-
-
-def load_config_info(path='config'):
-    directory = Path(path)
-    config = []
-    if not directory.is_dir():
-        raise NotADirectoryError(str(path) + ' is not a directory')
-    for path in directory.iterdir():
-        if path.suffix != '.json':
-            continue
-        try:
-            config.append(load(open(str(path), 'r')))
-        except Exception as e:
-            print(f'Failed to load {str(path)}:', e)
-    return config
+DEBUG = True
 
 
 def main():
-    manager = Manger(processor=process_messages)
-    config = load_config_info()
-    for each in config:
-        manager.add_crawler(each)
+    manager = Manger(processor=EmailReporter(debug=DEBUG), debug=DEBUG)
+    manager.load_config_info()
     while True:
         # once per minute
         cost_time = manager.run()

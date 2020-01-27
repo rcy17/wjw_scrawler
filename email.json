@@ -1,0 +1,9 @@
+{
+  "from": {
+    "username": "",
+    "password": ""
+  },
+  "to": [
+    "receiver@email.com"
+  ]
+}

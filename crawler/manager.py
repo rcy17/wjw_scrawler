@@ -7,6 +7,7 @@ A Manager class to manager crawler for different provinces
 import asyncio
 from pathlib import Path
 from datetime import datetime
+from json import load
 
 from .crawler import Crawler
 
@@ -19,6 +20,20 @@ class Manger:
         self._processor = processor
         self._messages = {}
         self.debug = debug
+
+    def load_config_info(self, path='config'):
+        directory = Path(path)
+        config = []
+        if not directory.is_dir():
+            raise NotADirectoryError(str(path) + ' is not a directory')
+        for path in directory.iterdir():
+            if path.suffix != '.json':
+                continue
+            try:
+                self.add_crawler(load(open(str(path), 'r')))
+            except Exception as e:
+                print(f'Failed to load {str(path)}:', e)
+        return config
 
     def add_crawler(self, info):
         info['path'] = self._path.joinpath(info.get('name', info['url'][-5:]) + '.json')

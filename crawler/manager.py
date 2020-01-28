@@ -60,7 +60,7 @@ class Manger:
 
     def need_report(self, title):
         """Judge if the news should be reported"""
-        keys = ['肺炎', '新增', '例', '病毒', '疫情']
+        keys = ['新型冠状病毒感染的肺炎', '最新疫情通报', '确诊病例']
         for key in keys:
             if key in title:
                 return True

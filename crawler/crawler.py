@@ -18,13 +18,11 @@ from crawler import parser
 HEADERS = {
     'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko)'
                   ' Chrome/79.0.3945.130 Safari/537.36',
-    'Cookie': ''
+    'Cookie': '',
 }
 
 # Notice that this Cookie should be set yourself from http://wsjkw.sh.gov.cn/xwfb/index.html
-HEADERS['Cookie'] += 'zh_choose=s; yd_cookie=9a475db3-b09d-44ef1d81b3ebdbf2bb7e86072c9481146e5c; ' \
-                     '_ydclearance=b37f6b4ed308a0164303b39a-b7fa-4e28-95cf-40ec5d53a2c9-1580154047; ' \
-                     'AlteonP=APXcZGHbHKwaO05Bt9EfFA$$; zh_choose=s'
+HEADERS['Cookie'] += 'zh_choose=s; zh_choose=s; yd_cookie=c6baceba-b902-468bc47e68e15355c176d0fed500f6ead6e7; _ydclearance=7b9b8e13af671ad0e01df357-c6c7-4109-ad21-b5dd69430036-1580217707; AlteonP=AHeRLWHbHKzz4HoGUzT+Nw$$'
 
 
 class Crawler:

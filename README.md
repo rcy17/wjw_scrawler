@@ -16,7 +16,7 @@
 {
     "name": "shanxi",
     "url": "http://wjw.shanxi.gov.cn/",
-    "parser": "title_in_attr_href_in_attr",
+    "parser_name": "title_in_attr_href_in_attr",
     "search_path": [
         {
             "name": "div",
@@ -32,7 +32,7 @@
 }
 ```
 
-其中`name`是地名的官方英文(实际上大多是拼音)，`url`是爬取目标的网址，`parser`是从目标结点解析出新闻标题与链接的函数名(该部分函数统一编写、管理)，`search_path`是一个从html解析树根部向下找到最新新闻标题的路径(实际路径或许可以压缩从而路径长度小于结点深度，设置路径时请自行用BeautifulSoup进行验证)。
+其中`name`是地名的官方英文(实际上大多是拼音)，`url`是爬取目标的网址，`parser_name`是从目标结点解析出新闻标题与链接的函数名(该部分函数统一编写、管理)，`search_path`是一个从html解析树根部向下找到最新新闻标题的路径(实际路径往往可以压缩到2～3段，设置路径时请自行用BeautifulSoup进行验证)。
 
 目前需要将各个网站添加到解析范围中，主要是添加本部分内容。
 

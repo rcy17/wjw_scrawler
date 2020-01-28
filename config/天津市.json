@@ -1,0 +1,14 @@
+{
+  "name": "Tianjin",
+  "url": "http://wsjk.tj.gov.cn/",
+  "parser_name": "title_in_attr_href_in_attr",
+  "search_path": [
+    {
+      "name": "div",
+      "id": "con-one-2"
+    },
+    {
+      "name": "a"
+    }
+  ]
+}

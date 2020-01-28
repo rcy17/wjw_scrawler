@@ -22,6 +22,7 @@ class Manger:
         self.debug = debug
 
     def load_config_info(self, path='config'):
+        """Load xxx.json config to config crawlers"""
         directory = Path(path)
         config = []
         if not directory.is_dir():
@@ -40,6 +41,7 @@ class Manger:
         self._crawlers[info['name']] = Crawler(manager=self, **info)
 
     def run(self):
+        """Run the pipeline"""
         start_time = datetime.now()
         self._messages.clear()
         tasks = [crawler.get_task() for crawler in self._crawlers.values()]
@@ -67,6 +69,7 @@ class Manger:
         return False
 
     def add_message(self, source, message):
+        """Try to add new message to report"""
         if not self.need_report(message['title']):
             return False
         # Now we just have one message, but maybe we will extend it in future, so use list

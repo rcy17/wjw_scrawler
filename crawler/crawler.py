@@ -13,15 +13,6 @@ from bs4 import BeautifulSoup
 
 from crawler import parser
 
-HEADERS = {
-    'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko)'
-                  ' Chrome/79.0.3945.130 Safari/537.36',
-    'Cookie': '',
-}
-
-# Notice that this Cookie should be set yourself from http://wsjkw.sh.gov.cn/xwfb/index.html
-HEADERS['Cookie'] += 'zh_choose=s; zh_choose=s; yd_cookie=c6baceba-b902-468bc47e68e15355c176d0fed500f6ead6e7; _ydclearance=7b9b8e13af671ad0e01df357-c6c7-4109-ad21-b5dd69430036-1580217707; AlteonP=AHeRLWHbHKzz4HoGUzT+Nw$$'
-
 
 class Crawler:
     def __init__(self, manager, url, search_path, name, path, parser_name=None, **kwargs):

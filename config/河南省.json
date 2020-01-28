@@ -1,0 +1,14 @@
+{
+  "name": "Henan",
+  "url": "http://hnwsjsw.gov.cn/channels/854.shtml",
+  "parser_name": "henan_parser",
+  "search_path": [
+    {
+      "name": "ul",
+      "class_": "list-group"
+    },
+    {
+      "name": "li"
+    }
+  ]
+}

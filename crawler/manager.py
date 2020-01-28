@@ -9,6 +9,8 @@ from pathlib import Path
 from datetime import datetime
 from json import load
 
+from aiohttp import ClientSession
+
 from .crawler import Crawler
 
 
@@ -40,15 +42,22 @@ class Manger:
         info['path'] = self._path.joinpath(info.get('name', info['url'][-5:]) + '.json')
         self._crawlers[info['name']] = Crawler(manager=self, **info)
 
+    async def run_crawlers(self):
+        async with ClientSession() as session:
+            tasks = [crawler.get_task(session) for crawler in self._crawlers.values()]
+            result = await asyncio.gather(*tasks, return_exceptions=True)
+            for index, msg in enumerate(result):
+                if isinstance(msg, Exception):
+                    print(f'[{datetime.now()}][ERROR] {type(msg)}: {msg}')
+
     def run(self):
         """Run the pipeline"""
         start_time = datetime.now()
         self._messages.clear()
-        tasks = [crawler.get_task() for crawler in self._crawlers.values()]
         loop = asyncio.get_event_loop()
         try:
             start = datetime.now()
-            loop.run_until_complete(asyncio.gather(*tasks))
+            loop.run_until_complete(self.run_crawlers())
             stop = datetime.now()
             if self.debug:
                 print(f'[{datetime.now()}] All crawlers cost', (stop-start).total_seconds(), 'seconds')
@@ -60,10 +69,13 @@ class Manger:
 
     def need_report(self, title):
         """Judge if the news should be reported"""
-        keys = ['新型冠状病毒感染的肺炎', '最新疫情通报', '确诊病例']
+        keys = ['新型冠状病毒感染的肺炎', '最新疫情通报']
         for key in keys:
             if key in title:
                 return True
+        # This is just for Hainan
+        if '确诊' in title and '例' in title:
+            return True
         if self.debug:
             print('Ignore title:', title)
         return False

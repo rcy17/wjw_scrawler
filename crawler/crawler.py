@@ -10,8 +10,6 @@ from json import load, dump
 from sys import stderr
 
 from bs4 import BeautifulSoup
-from aiohttp import ClientSession
-from chardet import detect
 
 from crawler import parser
 
@@ -39,18 +37,17 @@ class Crawler:
         except FileNotFoundError:
             self.record = {}
 
-    async def run(self):
-        async with ClientSession(headers=HEADERS) as session:
-            try:
-                async with session.get(self.url, timeout=30, verify_ssl=False) as response:
-                    # get data first
-                    data = await response.read()
-            except Exception as e:
-                print('[ERROR]', type(e), e)
-                return
+    async def run(self, session):
+        try:
+            async with session.get(self.url, timeout=20, verify_ssl=False) as response:
+                # get data first
+                data = await response.text()
+        except Exception as e:
+            print('[ERROR]', type(e), e)
+            return
         # Now serialize by Beautiful Soup with the given path
 
-        soup = BeautifulSoup(data.decode(detect(data)['encoding']), 'lxml')
+        soup = BeautifulSoup(data, 'lxml')
         try:
             node = reduce(lambda past, info: past.find(**info), self.search_path, soup)
         except AttributeError:
@@ -71,5 +68,5 @@ class Crawler:
         dump(result, open(self.path, 'w', encoding='utf-8'), ensure_ascii=False)
         self.manager.add_message(self.name, result)
 
-    def get_task(self):
-        return asyncio.ensure_future(self.run())
+    def get_task(self, session):
+        return asyncio.ensure_future(self.run(session))

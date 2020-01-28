@@ -5,47 +5,47 @@ Here define parser functions to parse url and title
 @Date   : 2020/1/27
 """
 from urllib.parse import urljoin
+import re
 
 
-def title_in_attr_href_in_attr(url, node):
+def title_in_attr_href_in_attr(base, node):
     """
     <a href="/related/url" title="the title">the shown title</a>
     """
     return {
         'title': node.get('title'),
-        'url': urljoin(url, node.get('href')),
+        'url': urljoin(base, node.get('href')),
     }
 
 
-def title_in_text_href_in_attr(url, node):
+def title_in_text_href_in_attr(base, node):
     """
-    <a href="/related_url">the title</a>
+    <a href="/related_base">the title</a>
     """
     return {
         'title': node.text.replace('\n', ' ').strip(),
-        'url': urljoin(url, node.get('href')),
+        'url': urljoin(base, node.get('href')),
     }
 
 
-def chongqing_parser(url, node):
+def chongqing_parser(base, node):
     """
-    <a href="/related_url">
+    <a href="/related_base">
         <span>date</span>
         <span title="the title">the shown title</span>
     </a>
     """
     return {
         'title': node.find('span').find_next_sibling().get('title'),
-        'url': urljoin(url, node.get('href')),
+        'url': urljoin(base, node.get('href')),
     }
 
 
-def henan_parser(url, node):
+def henan_parser(base, node):
     """
     It seems that Henan has two list respectively ordered by time,
     so I should find the second list's first news
     """
-    import re
     pattern = re.compile(r'\d{4}-\d{2}-\d{2}')
     result = node
     last_date = pattern.search(node.text).group()
@@ -56,8 +56,21 @@ def henan_parser(url, node):
             result = node
             break
         last_date = node_date
-    node = node.find('a')
+    node = result.find('a')
     return {
         'title': node.text,
-        'url': urljoin(url, node.get('href'))
+        'url': urljoin(base, node.get('href'))
     }
+
+
+def guizhou_parser(base, node):
+    """
+    This code are in JavaScript, and I try to parser code like:
+        var str_3 = "xxxx";
+    """
+    url, title = re.search(r'var str_1 = "(.*?)"[\s\S]*?var str_3 = "(.*?)"', node.text).groups()
+    return {
+        'title': title,
+        'url': urljoin(base, url)
+    }
+

@@ -1,0 +1,14 @@
+{
+  "name": "Guizhou",
+  "url": "http://www.gzhfpc.gov.cn/xwzx_500663/zwyw/",
+  "parser_name": "guizhou_parser",
+  "search_path": [
+    {
+      "name": "div",
+      "class_": "right_list"
+    },
+    {
+      "name": "script"
+    }
+  ]
+}

@@ -31,19 +31,22 @@ class EmailReporter(BasicReporter):
         server = SMTP_SSL('smtp.163.com')
         server.ehlo()
         server.login(self.account['username'], self.account['password'])
-        message = '<br>'.join(f'{index + 1}. {name}: <a href={msg["url"]}>{msg["title"]}</a>'
-                              for index, (name, [msg]) in enumerate(messages.items()))
+        messages = [(name, msg['title'], f'{name}: <a href={msg["url"]}>{msg["title"]}</a>')
+                    for (name, [msg]) in messages.items()]
+        '''message = '<br>'.join(f'{index + 1}. {name}: <a href={msg["url"]}>{msg["title"]}</a>'
+                              for index, (name, [msg]) in enumerate(messages.items()))'''
         for receiver in self.receivers:
-            try:
-                # construct a html message
-                msg = MIMEMultipart()
-                msg['From'] = self.account['username']
-                msg['To'] = receiver
-                msg['Subject'] = '卫健委新闻更新'
-                content = MIMEText(message, 'html', 'utf-8')
-                msg.attach(content)
-                server.send_message(msg)
-                print(f'[{datetime.now()}] Succeed to send email to {receiver}')
-            except Exception as e:
-                print(f'[{datetime.now()}] Failed to send email to {receiver}:', type(e), e)
+            for source, subject, message in messages:
+                try:
+                    # construct a html message
+                    msg = MIMEMultipart()
+                    msg['From'] = self.account['username']
+                    msg['To'] = receiver
+                    msg['Subject'] = source + '卫健委爬虫：' + subject
+                    content = MIMEText(message, 'html', 'utf-8')
+                    msg.attach(content)
+                    server.send_message(msg)
+                    print(f'[{datetime.now()}] Succeed to send email to {receiver}')
+                except Exception as e:
+                    print(f'[{datetime.now()}] Failed to send email to {receiver}:', type(e), e)
         server.close()

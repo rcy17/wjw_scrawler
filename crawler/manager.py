@@ -71,7 +71,7 @@ class Manger:
         stop_time = datetime.now()
         return (stop_time - start_time).total_seconds()
 
-    def need_report(self, title):
+    def need_report(self, source, title):
         """Judge if the news should be reported"""
         need = False
         keys = ['新型冠状病毒感染的肺炎疫情', '最新疫情通报']
@@ -85,12 +85,12 @@ class Manger:
             if key in title:
                 need = False
         if self.debug and not need:
-            print('Ignore title:', title)
+            print(f'Ignore title from {source}: {title}')
         return need
 
     def add_message(self, source, message):
         """Try to add new message to report"""
-        if not self.need_report(message['title']):
+        if not self.need_report(source, message['title']):
             return False
         # Now we just have one message, but maybe we will extend it in future, so use list
         self._messages.setdefault(source, [])

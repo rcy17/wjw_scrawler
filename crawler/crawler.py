@@ -79,7 +79,7 @@ class Crawler:
         # If this is not recorded, save and report it
         self.record = result
         dump(result, open(self.path, 'w', encoding='utf-8'), ensure_ascii=False)
-        self.manager.add_message(self.name, result)
+        self.manager.add_message(self.others['Chinese_name'], result)
 
     def get_task(self, session):
         return asyncio.ensure_future(self.run(session))

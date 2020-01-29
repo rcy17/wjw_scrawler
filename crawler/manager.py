@@ -80,7 +80,7 @@ class Manger:
                 need = True
         if ('确诊' in title or '新增' in title) and '例' in title:
             need = True
-        trash = ['工作']
+        trash = ['工作', '寻找', '应急', '原则']
         for key in trash:
             if key in title:
                 need = False

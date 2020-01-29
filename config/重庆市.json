@@ -1,5 +1,6 @@
 {
   "name": "Chongqing",
+  "Chinese_name": "重庆",
   "url": "http://wsjkw.cq.gov.cn/syyqzx/",
   "parser_name": "chongqing_parser",
   "search_path": [

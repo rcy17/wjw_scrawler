@@ -1,5 +1,6 @@
 {
   "name": "Qinghai",
+  "Chinese_name": "青海",
   "url": "https://wsjkw.qinghai.gov.cn/zhxw/xwzx/index.html",
   "parser_name": "title_in_attr_href_in_attr",
   "search_path": [

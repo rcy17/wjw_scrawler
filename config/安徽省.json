@@ -1,5 +1,6 @@
 {
   "name": "Anhui",
+  "Chinese_name": "安徽",
   "url": "http://wjw.ah.gov.cn/news_list_450_1.html",
   "parser_name": "title_in_text_href_in_attr",
   "search_path": [

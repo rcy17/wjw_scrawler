@@ -42,7 +42,7 @@ class EmailReporter(BasicReporter):
                     msg = MIMEMultipart()
                     msg['From'] = self.account['username']
                     msg['To'] = receiver
-                    msg['Subject'] = source + '卫健委爬虫：' + subject
+                    msg['Subject'] = source + '卫健委：' + subject
                     content = MIMEText(message, 'html', 'utf-8')
                     msg.attach(content)
                     server.send_message(msg)

@@ -1,5 +1,6 @@
 {
   "name": "Hebei",
+  "Chinese_name": "河北",
   "url": "http://www.hebwst.gov.cn/index.do?templet=new_list&cid=14",
   "parser_name": "title_in_attr_href_in_attr",
   "search_path": [

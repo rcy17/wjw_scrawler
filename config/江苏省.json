@@ -1,5 +1,6 @@
 {
   "name": "Jiangsu",
+  "Chinese_name": "江苏",
   "url": "http://wjw.jiangsu.gov.cn/",
   "parser_name": "title_in_attr_href_in_attr",
   "search_path": [

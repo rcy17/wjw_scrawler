@@ -10,6 +10,7 @@ from crawler.manager import Manger
 import reporter
 
 DEBUG = True
+INTERVAL_SECOND = 120
 
 
 def main():
@@ -18,8 +19,8 @@ def main():
     while True:
         # once per minute
         cost_time = manager.run()
-        if cost_time < 60:
-            time.sleep(60 - cost_time)
+        if cost_time < INTERVAL_SECOND:
+            time.sleep(INTERVAL_SECOND - cost_time)
 
 
 if __name__ == '__main__':

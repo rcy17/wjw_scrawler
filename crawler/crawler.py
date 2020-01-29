@@ -8,10 +8,12 @@ import asyncio
 from functools import reduce
 from json import load, dump
 from sys import stderr
+from re import search
 
 from bs4 import BeautifulSoup
 
 from crawler import parser
+from js2py import eval_js
 
 
 class Crawler:
@@ -28,16 +30,36 @@ class Crawler:
         except FileNotFoundError:
             self.record = {}
 
+    async def anti_anti_spider_for_shanghai(self, session, url, data):
+        """
+        This part is to fight with the anti_spider code of shanghai web
+        """
+        # parse parameter and function of JavaScript code
+        param, func = search(r'(\d+).*?(function.*})', data).groups()
+        # return string instead of eval it
+        func = func.replace('eval("qo=eval;qo(po);")', 'return po')
+        # now eval JavaScript and parse cookie
+        func = eval_js(func)
+        cookie = search(r"'(.*)'", func(param)).group(1)
+        # now get again with our new cookie
+        async with session.get(url, timeout=15, verify_ssl=False, headers={'Cookie': cookie}) as response:
+            return await response.text()
+
     async def run(self, session):
         try:
-            async with session.get(self.url, timeout=20, verify_ssl=False) as response:
-                # get data first
-                data = await response.text()
+            async with session.get(self.url, timeout=15, verify_ssl=False) as response:
+                data, code = await response.text(), response.status
+            # this part is for Shanghai specially
         except Exception as e:
-            print('[ERROR]', type(e), e)
+            print('[ERROR]', self.name, type(e), e)
             return
+        if code == 521:
+            try:
+                data = await self.anti_anti_spider_for_shanghai(session, self.url, data)
+            except Exception as e:
+                print('[ERROR]', self.name, type(e), e)
+                return
         # Now serialize by Beautiful Soup with the given path
-
         soup = BeautifulSoup(data, 'lxml')
         try:
             node = reduce(lambda past, info: past.find(**info), self.search_path, soup)

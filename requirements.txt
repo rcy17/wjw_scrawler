@@ -2,3 +2,4 @@ requests
 BeautifulSoup4
 aiohttp
 chardet
+js2py

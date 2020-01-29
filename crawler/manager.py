@@ -16,11 +16,7 @@ from .crawler import Crawler
 HEADERS = {
     'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.34 (KHTML, like Gecko)'
                   ' Chrome/79.0.3945.130 Safari/537.34',
-    'Cookie': '',
 }
-
-# Notice that this Cookie should be set yourself from http://wsjkw.sh.gov.cn/xwfb/index.html
-HEADERS['Cookie'] += 'zh_choose=s; zh_choose=s; yd_cookie=c6baceba-b902-468bc47e68e15355c176d0fed500f6ead6e7; _ydclearance=4d5498cd30d9c8426d9a5e41-ca53-4569-9ce3-b41bbaa02723-1580227445; AlteonP=AO1GZGHbHKydo9ENLQrXeA$$'
 
 
 class Manger:

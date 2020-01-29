@@ -14,8 +14,8 @@ from aiohttp import ClientSession
 from .crawler import Crawler
 
 HEADERS = {
-    'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.35 (KHTML, like Gecko)'
-                  ' Chrome/79.0.3945.130 Safari/537.35',
+    'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.34 (KHTML, like Gecko)'
+                  ' Chrome/79.0.3945.130 Safari/537.34',
     'Cookie': '',
 }
 
@@ -63,10 +63,9 @@ class Manger:
         """Run the pipeline"""
         start_time = datetime.now()
         self._messages.clear()
-        loop = asyncio.get_event_loop()
         try:
             start = datetime.now()
-            loop.run_until_complete(self.run_crawlers())
+            asyncio.run(self.run_crawlers())
             stop = datetime.now()
             if self.debug:
                 print(f'[{datetime.now()}] All crawlers cost', (stop-start).total_seconds(), 'seconds')
@@ -78,16 +77,20 @@ class Manger:
 
     def need_report(self, title):
         """Judge if the news should be reported"""
-        keys = ['新型冠状病毒感染的肺炎', '最新疫情通报']
+        need = False
+        keys = ['新型冠状病毒感染的肺炎疫情', '最新疫情通报']
         for key in keys:
             if key in title:
-                return True
-        # This is just for Hainan
-        if '确诊' in title and '例' in title:
-            return True
-        if self.debug:
+                need = True
+        if ('确诊' in title or '新增' in title) and '例' in title:
+            need = True
+        trash = ['工作']
+        for key in trash:
+            if key in title:
+                need = False
+        if self.debug and not need:
             print('Ignore title:', title)
-        return False
+        return need
 
     def add_message(self, source, message):
         """Try to add new message to report"""

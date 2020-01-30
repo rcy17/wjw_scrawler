@@ -73,18 +73,15 @@ class Crawler:
         # Parse newest news title and url
         result = parse_function(self.url, node)
 
-        record_title = self.record.get('title')
+        record = self.record.get('news', {})
         buffer = self.record.get('buffer', {})
-        if result['title'] == record_title:
+        if result == record:
             return
-        self.record['buffer'] = {
-            'title': self.record['title'],
-            'url': self.record['url'],
-        }
-        self.record.update(result)
+        self.record['buffer'] = record
+        self.record['news'] = result
         dump(self.record, open(self.path, 'w', encoding='utf-8'), ensure_ascii=False)
         # If this is not recorded, save and report it
-        if result['title'] != buffer.get('title'):
+        if result != buffer:
             self.manager.add_message(self.others['Chinese_name'], result)
 
     def get_task(self, session):

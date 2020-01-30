@@ -1,7 +1,7 @@
 {
   "name": "Guizhou",
   "Chinese_name": "贵州",
-  "url": "http://www.gzhfpc.gov.cn/xwzx_500663/zwyw/",
+  "url": "http://www.gzhfpc.gov.cn/xwzx_500663/tzgg/",
   "parser_name": "guizhou_parser",
   "search_path": [
     {

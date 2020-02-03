@@ -65,7 +65,7 @@ def henan_parser(base, node):
 
 def guizhou_parser(base, node):
     """
-    This code are in JavaScript, and I try to parser code like:
+    Here we get JavaScript code, and I try to parser code like:
         var str_3 = "xxxx";
     """
     url, title = re.search(r'var str_1 = "(.*?)"[\s\S]*?var str_3 = "(.*?)"', node.text).groups()
@@ -74,3 +74,15 @@ def guizhou_parser(base, node):
         'url': urljoin(base, url)
     }
 
+
+def wuxi_parser(base, node):
+    """
+    <a href="/related_base">
+        <h3>the title</h3>
+        <p>the content</p>
+    </a>
+    """
+    return {
+        'title': node.find('h3').text,
+        'url': urljoin(base, node.get('href'))
+    }

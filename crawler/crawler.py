@@ -48,7 +48,13 @@ class Crawler:
     async def run(self, session):
         try:
             async with session.get(self.url, timeout=15, verify_ssl=False) as response:
-                data, code = await response.text(), response.status
+                if self.others.get('code'):
+                    # if code is assigned, then we must use it
+                    data = await response.read()
+                    data = data.decode(self.others['code'], 'replace')
+                else:
+                    data = await response.text()
+                code = response.status
             # this part is for Shanghai specially
         except Exception as e:
             print('[ERROR]', self.name, type(e), e)

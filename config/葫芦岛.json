@@ -1,0 +1,19 @@
+{
+  "name": "Huludao",
+  "Chinese_name": "葫芦岛",
+  "url": "http://wsjk.hld.gov.cn/zwgk/tzgg/",
+  "parser_name": "title_in_text_href_in_attr",
+  "search_path": [
+    {
+      "name": "ul",
+      "class_": "list-1"
+    },
+    {
+      "name": "li"
+    },
+    {
+      "name": "a"
+    }
+  ]
+}
+

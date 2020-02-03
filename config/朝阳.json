@@ -1,0 +1,15 @@
+{
+  "name": "Chaoyang",
+  "Chinese_name": "朝阳",
+  "url": "http://wjw.zgcy.gov.cn/Cywjj/xwzx/001001/",
+  "parser_name": "title_in_attr_href_in_attr",
+  "search_path": [
+    {
+      "name": "div",
+      "class_": "categorypagingcontent"
+    },
+    {
+      "name": "a"
+    }
+  ]
+}

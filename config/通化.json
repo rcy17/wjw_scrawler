@@ -1,0 +1,22 @@
+{
+  "name": "Tonghua",
+  "Chinese_name": "通化",
+  "url": "http://www.tonghua.gov.cn/wjw/gsgk/",
+  "parser_name": "title_in_text_href_in_attr",
+  "search_path": [
+    {
+      "name": "div",
+      "class_": "newslist"
+    },
+    {
+      "name": "ul"
+    },
+    {
+      "name": "li"
+    },
+    {
+      "name": "a"
+    }
+  ]
+}
+

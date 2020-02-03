@@ -1,0 +1,15 @@
+{
+  "name": "Meizhou",
+  "Chinese_name": "梅州",
+  "url": "https://www.meizhou.gov.cn/zwgk/zfjg/swsjkj/zfxxgkml/gzdt/index.html",
+  "parser_name": "title_in_attr_href_in_attr",
+  "search_path": [
+    {
+      "name": "ul",
+      "class_": "list"
+    },
+    {
+      "name": "a"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "name": "Zhaoqing",
+  "Chinese_name": "肇庆",
+  "url": "http://wjj.zhaoqing.gov.cn/zwxx/yqxx/index.html",
+  "parser_name": "title_in_text_href_in_attr",
+  "search_path": [
+    {
+      "name": "div",
+      "class_": "R_con_gl_l"
+    },
+    {
+      "name": "a"
+    }
+  ]
+}

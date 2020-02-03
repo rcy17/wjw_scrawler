@@ -1,0 +1,15 @@
+{
+  "name": "Sanming",
+  "Chinese_name": "三明",
+  "url": "http://wjw.sm.gov.cn/xxgk/wjyw/sjdt/",
+  "parser_name": "title_in_attr_href_in_attr",
+  "search_path": [
+    {
+      "name": "div",
+      "class_": "gl_lb"
+    },
+    {
+      "name": "a"
+    }
+  ]
+}

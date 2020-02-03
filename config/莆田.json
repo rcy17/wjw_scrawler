@@ -1,0 +1,15 @@
+{
+  "name": "Putian",
+  "Chinese_name": "莆田",
+  "url": "http://wjw.putian.gov.cn/zwgk/qwbd/",
+  "parser_name": "title_in_attr_href_in_attr",
+  "search_path": [
+    {
+      "name": "ul",
+      "class_": "pad-T10"
+    },
+    {
+      "name": "a"
+    }
+  ]
+}

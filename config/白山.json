@@ -1,0 +1,22 @@
+{
+  "name": "Baishan",
+  "Chinese_name": "白山",
+  "url": "http://wsjkw.cbs.gov.cn/xwzx/",
+  "parser_name": "title_in_text_href_in_attr",
+  "search_path": [
+    {
+      "name": "div",
+      "class_": "zylm1"
+    },
+    {
+      "name": "ul"
+    },
+    {
+      "name": "li"
+    },
+    {
+      "name": "a"
+    }
+  ]
+}
+

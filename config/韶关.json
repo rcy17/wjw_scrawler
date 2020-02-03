@@ -1,0 +1,15 @@
+{
+  "name": "Shaoguan",
+  "Chinese_name": "韶关",
+  "url": "http://wsjk.sg.gov.cn/xwdt/gzdt/",
+  "parser_name": "title_in_attr_href_in_attr",
+  "search_path": [
+    {
+      "name": "div",
+      "class_": "gl-cont-r"
+    },
+    {
+      "name": "a"
+    }
+  ]
+}

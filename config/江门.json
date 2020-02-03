@@ -1,0 +1,15 @@
+{
+  "name": "Jiangmen",
+  "Chinese_name": "江门",
+  "url": "http://www.jiangmen.gov.cn/ztbd/qlzhyqfk/jmzxd/index.html",
+  "parser_name": "title_in_attr_href_in_attr",
+  "search_path": [
+    {
+      "name": "div",
+      "class_": "pageList"
+    },
+    {
+      "name": "a"
+    }
+  ]
+}

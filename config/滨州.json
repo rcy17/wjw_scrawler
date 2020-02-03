@@ -1,0 +1,15 @@
+{
+  "name": "Binzhou",
+  "Chinese_name": "滨州",
+  "url": "http://wjw.binzhou.gov.cn/zhengwu/class/",
+  "parser_name": "title_in_attr_href_in_attr",
+  "search_path": [
+    {
+      "name": "div",
+      "class_": "news_right"
+    },
+    {
+      "name": "a"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "name": "Xuzhou",
+  "Chinese_name": "徐州",
+  "url": "http://www.xz.gov.cn/zgxz/zwgk/008010/008010003/",
+  "parser_name": "title_in_text_href_in_attr",
+  "search_path": [
+    {
+      "name": "li",
+      "class_": "ewb-data-list"
+    },
+    {
+      "name": "a"
+    }
+  ]
+}

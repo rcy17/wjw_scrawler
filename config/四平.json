@@ -1,0 +1,19 @@
+{
+  "name": "Siping",
+  "Chinese_name": "四平",
+  "url": "http://wjw.siping.gov.cn/zwgk/tzgg/",
+  "parser_name": "title_in_text_href_in_attr",
+  "search_path": [
+    {
+      "name": "ul",
+      "class_": "xxfkul"
+    },
+    {
+      "name": "li"
+    },
+    {
+      "name": "a"
+    }
+  ]
+}
+

@@ -1,0 +1,15 @@
+{
+  "name": "wuhan",
+  "Chinese_name": "武汉",
+  "url": "http://wjw.wuhan.gov.cn/front/web/list3rd/no/802",
+  "parser_name": "title_in_attr_href_in_attr",
+  "search_path": [
+    {
+      "name": "div",
+      "class_": "xxgksublist"
+    },
+    {
+      "name": "a"
+    }
+  ]
+}

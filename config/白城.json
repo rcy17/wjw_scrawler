@@ -1,0 +1,16 @@
+{
+  "name": "Baicheng",
+  "Chinese_name": "白城",
+  "url": "http://wjw.jlbc.gov.cn/gkgs/",
+  "parser_name": "title_in_text_href_in_attr",
+  "search_path": [
+    {
+      "name": "td",
+      "class_": "gray14"
+    },
+    {
+      "name": "a"
+    }
+  ]
+}
+

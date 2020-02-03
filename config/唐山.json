@@ -1,0 +1,15 @@
+{
+  "name": "Tangshan",
+  "Chinese_name": "唐山",
+  "url": "http://wsjkwyh.tangshan.gov.cn/tswjw/tswjw_wjdt/",
+  "parser_name": "title_in_text_href_in_attr",
+  "search_path": [
+    {
+      "name": "div",
+      "class_": "contentrightbottom"
+    },
+    {
+      "name": "a"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "name": "Foshan",
+  "Chinese_name": "佛山",
+  "url": "http://wjj.foshan.gov.cn/",
+  "parser_name": "title_in_attr_href_in_attr",
+  "search_path": [
+    {
+      "name": "div",
+      "class_": "gggs"
+    },
+    {
+      "name": "ul"
+    },
+    {
+      "name": "a"
+    }
+  ]
+}

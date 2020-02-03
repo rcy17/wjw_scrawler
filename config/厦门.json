@@ -1,0 +1,15 @@
+{
+  "name": "Xiamen",
+  "Chinese_name": "厦门",
+  "url": "http://hfpc.xm.gov.cn/xwzx/xwzx/",
+  "parser_name": "title_in_attr_href_in_attr",
+  "search_path": [
+    {
+      "name": "div",
+      "class_": "gl_list"
+    },
+    {
+      "name": "a"
+    }
+  ]
+}

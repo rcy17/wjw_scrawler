@@ -1,0 +1,15 @@
+{
+  "name": "Liaocheng",
+  "Chinese_name": "聊城",
+  "url": "http://wjw.liaocheng.gov.cn/xwzx_12609/gggs/",
+  "parser_name": "title_in_attr_href_in_attr",
+  "search_path": [
+    {
+      "name": "article",
+      "class_": "list-page"
+    },
+    {
+      "name": "a"
+    }
+  ]
+}

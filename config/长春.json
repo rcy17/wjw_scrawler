@@ -1,0 +1,19 @@
+{
+  "name": "Changchun",
+  "Chinese_name": "长春",
+  "url": "http://wjw.changchun.gov.cn/xwzx/tzgg/",
+  "parser_name": "title_in_text_href_in_attr",
+  "search_path": [
+    {
+      "name": "ul",
+      "class_": "x_zcjd_li mar0"
+    },
+    {
+      "name": "li"
+    },
+    {
+      "name": "a"
+    }
+  ]
+}
+

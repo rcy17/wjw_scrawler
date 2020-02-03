@@ -1,0 +1,16 @@
+{
+  "name": "Xizang",
+  "Chinese_name": "西藏",
+  "url": "http://wjw.xizang.gov.cn/xwzx/wsjkdt/",
+  "parser_name": "title_in_text_href_in_attr",
+  "search_path": [
+    {
+      "name": "div",
+      "class_": "wrap2_mid"
+    },
+    {
+      "name": "a"
+    }
+  ]
+}
+

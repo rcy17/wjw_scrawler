@@ -1,0 +1,15 @@
+{
+  "name": "Dezhou",
+  "Chinese_name": "德州",
+  "url": "http://dzwjw.dezhou.gov.cn/n916627/index.html",
+  "parser_name": "title_in_text_href_in_attr",
+  "search_path": [
+    {
+      "name": "div",
+      "class_": "container bg-white"
+    },
+    {
+      "name": "a"
+    }
+  ]
+}

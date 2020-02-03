@@ -1,0 +1,16 @@
+{
+  "name": "Songyuan",
+  "Chinese_name": "松原",
+  "url": "http://wsjkw.jlsy.gov.cn/xwzx/xqjl/",
+  "parser_name": "title_in_text_href_in_attr",
+  "search_path": [
+    {
+      "name": "td",
+      "class_": "bbr"
+    },
+    {
+      "name": "a"
+    }
+  ]
+}
+

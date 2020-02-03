@@ -1,0 +1,24 @@
+{
+  "name": "Weihai",
+  "Chinese_name": "威海",
+  "url": "http://wsjkw.weihai.gov.cn/",
+  "parser_name": "title_in_attr_href_in_attr",
+  "search_path": [
+    {
+      "name": "div",
+      "class_": "tuijian"
+    },
+{
+      "name": "table"
+    },
+    {
+      "name" : "tr"
+    },
+    {
+      "name" : "td"
+    },
+    {
+      "name" : "a"
+    }
+  ]
+}

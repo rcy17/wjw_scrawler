@@ -1,0 +1,15 @@
+{
+  "name": "Suzhou",
+  "Chinese_name": "苏州",
+  "url": "http://wsjkw.suzhou.gov.cn/szswjw/bdxw/nav_list.shtml",
+  "parser_name": "title_in_text_href_in_attr",
+  "search_path": [
+    {
+      "name": "ul",
+      "class_": "item"
+    },
+    {
+      "name": "a"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "name": "Jinan",
+  "Chinese_name": "济南",
+  "url": "http://jnmhc.jinan.gov.cn/col/col50360/",
+  "parser_name": "title_in_attr_href_in_attr",
+  "search_path": [
+    {
+      "name": "ul",
+      "class_": "gzbd_tzgg"
+    },
+    {
+      "name": "a"
+    }
+  ]
+}

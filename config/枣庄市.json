@@ -1,6 +1,7 @@
 {
   "name": "Zaozhuang",
   "Chinese_name": "枣庄",
+  "province": "山东",
   "url": "http://wsjkw.zaozhuang.gov.cn/gzdt/xwtt/",
   "parser_name": "title_in_text_href_in_attr",
   "search_path": [

@@ -1,6 +1,7 @@
 {
   "name": "Xiangyang",
   "Chinese_name": "襄阳",
+  "province": "湖北",
   "url": "http://www.xiangyang.gov.cn/zxzx/jrgz/",
   "parser_name": "title_in_attr_href_in_attr",
   "search_path": [

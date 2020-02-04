@@ -1,6 +1,7 @@
 {
   "name": "Tianjin",
   "Chinese_name": "天津",
+  "province": "天津",
   "url": "http://wsjk.tj.gov.cn/",
   "parser_name": "title_in_attr_href_in_attr",
   "search_path": [

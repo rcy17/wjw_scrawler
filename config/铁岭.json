@@ -1,6 +1,7 @@
 {
   "name": "Tieling",
   "Chinese_name": "铁岭",
+  "province": "辽宁",
   "url": "http://wjw.tieling.gov.cn/tielingws/tzgg/index.html",
   "parser_name": "title_in_attr_href_in_attr",
   "search_path": [

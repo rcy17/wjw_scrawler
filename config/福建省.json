@@ -1,6 +1,7 @@
 {
   "name": "Fujian",
   "Chinese_name": "福建",
+  "province": "福建",
   "url": "http://wjw.fujian.gov.cn/xxgk/gzdt/wsjsyw/",
   "parser_name": "title_in_attr_href_in_attr",
   "search_path": [

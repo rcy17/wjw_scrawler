@@ -1,6 +1,7 @@
 {
   "name": "Songyuan",
   "Chinese_name": "松原",
+  "province": "吉林",
   "url": "http://wsjkw.jlsy.gov.cn/xwzx/xqjl/",
   "parser_name": "title_in_text_href_in_attr",
   "search_path": [

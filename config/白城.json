@@ -1,6 +1,7 @@
 {
   "name": "Baicheng",
   "Chinese_name": "白城",
+  "province": "吉林",
   "url": "http://wjw.jlbc.gov.cn/gkgs/",
   "parser_name": "title_in_text_href_in_attr",
   "search_path": [

@@ -1,6 +1,7 @@
 {
   "name": "Meizhou",
   "Chinese_name": "梅州",
+  "province": "广东",
   "url": "https://www.meizhou.gov.cn/zwgk/zfjg/swsjkj/zfxxgkml/gzdt/index.html",
   "parser_name": "title_in_attr_href_in_attr",
   "search_path": [

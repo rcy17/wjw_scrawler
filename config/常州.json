@@ -1,6 +1,7 @@
 {
   "name": "changzhou",
   "Chinese_name": "常州",
+  "province": "江苏",
   "url": "http://www.changzhou.gov.cn/ns_class/xwzx_01",
   "parser_name": "title_in_attr_href_in_attr",
   "search_path": [

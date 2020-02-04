@@ -1,6 +1,7 @@
 {
   "name": "Quanzhou",
   "Chinese_name": "泉州",
+  "province": "福建",
   "url": "http://health.quanzhou.gov.cn/xwzx/tzgg/",
   "parser_name": "title_in_attr_href_in_attr",
   "search_path": [

@@ -1,6 +1,7 @@
 {
   "name": "Binzhou",
   "Chinese_name": "滨州",
+  "province": "山东",
   "url": "http://wjw.binzhou.gov.cn/zhengwu/class/",
   "parser_name": "title_in_attr_href_in_attr",
   "search_path": [

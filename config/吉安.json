@@ -1,6 +1,7 @@
 {
   "name": "Jian",
   "Chinese_name": "吉安",
+  "province": "江西",
   "url": "http://wsjk.jian.gov.cn/news-list-gzyw.html",
   "parser_name": "title_in_attr_href_in_attr",
   "search_path": [

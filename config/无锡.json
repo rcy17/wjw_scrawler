@@ -1,6 +1,7 @@
 {
   "name": "wuxi",
   "Chinese_name": "无锡",
+  "province": "江苏",
   "url": "http://www.wuxi.gov.cn/ztzl/zyqzt/fyyw/index.shtml",
   "parser_name": "wuxi_parser",
   "search_path": [

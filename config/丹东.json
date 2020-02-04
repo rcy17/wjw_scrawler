@@ -1,6 +1,7 @@
 {
   "name": "Dandong",
   "Chinese_name": "丹东",
+  "province": "辽宁",
   "url": "http://wsjsw.dandong.gov.cn/wjw/yqfk/",
   "parser_name": "title_in_attr_href_in_attr",
   "search_path": [

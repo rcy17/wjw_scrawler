@@ -1,6 +1,7 @@
 {
   "name": "Baishan",
   "Chinese_name": "白山",
+  "province": "吉林",
   "url": "http://wsjkw.cbs.gov.cn/xwzx/",
   "parser_name": "title_in_text_href_in_attr",
   "search_path": [

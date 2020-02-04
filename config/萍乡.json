@@ -1,6 +1,7 @@
 {
   "name": "Pingxiang",
   "Chinese_name": "萍乡",
+  "province": "江西",
   "url": "http://wjw.pingxiang.gov.cn/news/class/?133.html",
   "parser_name": "title_in_text_href_in_attr",
   "code": "utf-8",

@@ -1,6 +1,7 @@
 {
   "name": "Changchun",
   "Chinese_name": "长春",
+  "province": "吉林",
   "url": "http://wjw.changchun.gov.cn/xwzx/tzgg/",
   "parser_name": "title_in_text_href_in_attr",
   "search_path": [

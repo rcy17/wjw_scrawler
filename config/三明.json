@@ -1,6 +1,7 @@
 {
   "name": "Sanming",
   "Chinese_name": "三明",
+  "province": "福建",
   "url": "http://wjw.sm.gov.cn/xxgk/wjyw/sjdt/",
   "parser_name": "title_in_attr_href_in_attr",
   "search_path": [

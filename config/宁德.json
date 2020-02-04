@@ -1,6 +1,7 @@
 {
   "name": "Ningde",
   "Chinese_name": "宁德",
+  "province": "福建",
   "url": "http://wjw.ningde.gov.cn/xwdt/gzdt/",
   "parser_name": "title_in_attr_href_in_attr",
   "search_path": [

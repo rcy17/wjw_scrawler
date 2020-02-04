@@ -1,6 +1,7 @@
 {
   "name": "Hunan",
   "Chinese_name": "湖南",
+  "province": "湖南",
   "url": "http://wjw.hunan.gov.cn/wjw/index.html",
   "parser_name": "title_in_attr_href_in_attr",
   "search_path": [

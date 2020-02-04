@@ -1,6 +1,7 @@
 {
     "name": "Benxi",
     "Chinese_name": "本溪",
+    "province": "辽宁",
     "url": "http://wjw.benxi.gov.cn/xwzx",
     "parser_name": "title_in_attr_href_in_attr",
     "search_path": [

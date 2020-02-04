@@ -1,6 +1,7 @@
 {
   "name": "Longyan",
   "Chinese_name": "龙岩",
+  "province": "福建",
   "url": "http://wjw.longyan.gov.cn/zwgk/",
   "parser_name": "title_in_attr_href_in_attr",
   "search_path": [

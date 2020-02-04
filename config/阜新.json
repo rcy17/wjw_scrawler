@@ -1,6 +1,7 @@
 {
   "name": "Fuxin",
   "Chinese_name": "阜新",
+  "province": "辽宁",
   "url": "http://www.fuxin.gov.cn/fxswsj/",
   "parser_name": "title_in_attr_href_in_attr",
   "search_path": [

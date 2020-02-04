@@ -1,6 +1,7 @@
 {
   "name": "Rizhao",
   "Chinese_name": "日照",
+  "province": "山东",
   "url": "http://wsjkw.rizhao.gov.cn/",
   "parser_name": "title_in_attr_href_in_attr",
   "search_path": [

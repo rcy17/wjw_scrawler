@@ -1,6 +1,7 @@
 {
   "name": "Qingyuan",
   "Chinese_name": "清远",
+  "province": "广东",
   "url": "http://www.gdqy.gov.cn/xxgk/zzjg/zfjg/qyswsjkj/tzgga/index.html",
   "parser_name": "title_in_text_href_in_attr",
   "search_path": [

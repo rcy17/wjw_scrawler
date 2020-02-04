@@ -1,6 +1,7 @@
 {
   "name": "Sichuan",
   "Chinese_name": "四川",
+  "province": "四川",
   "url": "http://wsjkw.sc.gov.cn/scwsjkw/gzbd01/ztwzlmgl.shtml",
   "parser_name": "title_in_text_href_in_attr",
   "search_path": [

@@ -1,6 +1,7 @@
 {
   "name": "Xizang",
   "Chinese_name": "西藏",
+  "province": "西藏",
   "url": "http://wjw.xizang.gov.cn/xwzx/wsjkdt/",
   "parser_name": "title_in_text_href_in_attr",
   "search_path": [

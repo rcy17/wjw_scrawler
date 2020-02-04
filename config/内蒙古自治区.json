@@ -1,6 +1,7 @@
 {
   "name": "InnerMongolia",
   "Chinese_name": "内蒙古",
+  "province": "内蒙古",
   "url": "http://wjw.nmg.gov.cn/xwzx/xwfb/index.shtml",
   "parser_name": "title_in_attr_href_in_attr",
   "search_path": [

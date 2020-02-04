@@ -1,6 +1,7 @@
 {
   "name": "Huludao",
   "Chinese_name": "葫芦岛",
+  "province": "辽宁",
   "url": "http://wsjk.hld.gov.cn/zwgk/tzgg/",
   "parser_name": "title_in_text_href_in_attr",
   "search_path": [

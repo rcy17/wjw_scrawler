@@ -1,6 +1,7 @@
 {
   "name": "Suzhou",
   "Chinese_name": "苏州",
+  "province": "江苏",
   "url": "http://wsjkw.suzhou.gov.cn/szswjw/bdxw/nav_list.shtml",
   "parser_name": "title_in_text_href_in_attr",
   "search_path": [

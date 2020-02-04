@@ -1,6 +1,7 @@
 {
   "name": "Guangxi",
   "Chinese_name": "广西",
+  "province": "广西",
   "url": "http://wsjkw.gxzf.gov.cn/gzdt/bt/",
   "parser_name": "title_in_attr_href_in_attr",
   "search_path": [

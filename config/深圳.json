@@ -1,6 +1,7 @@
 {
   "name": "Shenzhen",
   "Chinese_name": "深圳",
+  "province": "广东",
   "url": "http://wjw.sz.gov.cn/yqxx/",
   "parser_name": "title_in_text_href_in_attr",
   "search_path": [

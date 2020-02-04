@@ -1,6 +1,7 @@
 {
   "name": "Jiujiang",
   "Chinese_name": "九江",
+  "province": "江西",
   "url": "http://wjw.jiujiang.gov.cn/zwzx_207/xwbd/ttxw/",
   "parser_name": "title_in_attr_href_in_attr",
   "search_path": [

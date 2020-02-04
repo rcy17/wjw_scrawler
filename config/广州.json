@@ -1,6 +1,7 @@
 {
   "name": "Guangzhou",
   "Chinese_name": "广州",
+  "province": "广东",
   "url": "http://wjw.gz.gov.cn/ztzl/xxfyyqfk/yqtb/index.html",
   "parser_name": "title_in_attr_href_in_attr",
   "search_path": [

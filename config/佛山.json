@@ -1,6 +1,7 @@
 {
   "name": "Foshan",
   "Chinese_name": "佛山",
+  "province": "广东",
   "url": "http://wjj.foshan.gov.cn/",
   "parser_name": "title_in_attr_href_in_attr",
   "search_path": [

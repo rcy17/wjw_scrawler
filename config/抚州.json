@@ -1,6 +1,7 @@
 {
   "name": "Fuzhou",
   "Chinese_name": "抚州",
+  "province": "江西",
   "url": "http://wjw.jxfz.gov.cn/index.html",
   "parser_name": "title_in_attr_href_in_attr",
   "search_path": [

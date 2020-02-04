@@ -1,6 +1,7 @@
 {
   "name": "Zhangzhou",
   "Chinese_name": "漳州",
+  "province": "福建",
   "url": "http://wjw.zhangzhou.gov.cn/cms/html/zzswshjhsywyh/yqfkdt/index.html",
   "parser_name": "title_in_text_href_in_attr",
   "search_path": [

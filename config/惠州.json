@@ -1,6 +1,7 @@
 {
   "name": "Huizhou",
   "Chinese_name": "惠州",
+  "province": "广东",
   "url": "http://wjj.huizhou.gov.cn/zwgk/gzdt/index_3.html",
   "parser_name": "title_in_attr_href_in_attr",
   "search_path": [

@@ -1,6 +1,7 @@
 {
   "name": "Qindao",
   "Chinese_name": "青岛",
+  "province": "山东",
   "url": "http://wsjsw.qingdao.gov.cn/n28356065/n32563060/n32563061/index.html",
   "parser_name": "title_in_attr_href_in_attr",
   "search_path": [

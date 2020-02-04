@@ -1,6 +1,7 @@
 {
   "name": "Baoding",
   "Chinese_name": "保定",
+  "province": "河北",
   "url": "http://www.bdswjw.gov.cn/textlist.jsp?urltype=tree.TreeTempUrl&wbtreeid=1017",
   "parser_name": "title_in_attr_href_in_attr",
   "search_path": [

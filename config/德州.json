@@ -1,6 +1,7 @@
 {
   "name": "Dezhou",
   "Chinese_name": "德州",
+  "province": "山东",
   "url": "http://dzwjw.dezhou.gov.cn/n916627/index.html",
   "parser_name": "title_in_text_href_in_attr",
   "search_path": [

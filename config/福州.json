@@ -1,6 +1,7 @@
 {
   "name": "Fuzhou",
   "Chinese_name": "福州",
+  "province": "福建",
   "url": "http://www.fuzhou.gov.cn/zgfzzt/swjw/fzwj/wjgg/",
   "parser_name": "title_in_attr_href_in_attr",
   "search_path": [

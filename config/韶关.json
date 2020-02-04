@@ -1,6 +1,7 @@
 {
   "name": "Shaoguan",
   "Chinese_name": "韶关",
+  "province": "广东",
   "url": "http://wsjk.sg.gov.cn/xwdt/gzdt/",
   "parser_name": "title_in_attr_href_in_attr",
   "search_path": [

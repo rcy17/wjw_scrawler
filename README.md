@@ -14,26 +14,25 @@
 
 ```json
 {
-    "name": "shanxi",
-    "Chinese_name": "山西",
-    "url": "http://wjw.shanxi.gov.cn/",
-    "parser_name": "title_in_attr_href_in_attr",
-    "search_path": [
-        {
-            "name": "div",
-            "class_": "news_box"
-        },
-        {
-            "name": "li"
-        },
-        {
-            "name": "a"
-        }
-    ]
+  "name": "Pingxiang",
+  "Chinese_name": "萍乡",
+  "province": "江西",
+  "url": "http://wjw.pingxiang.gov.cn/news/class/?133.html",
+  "parser_name": "title_in_text_href_in_attr",
+  "code": "utf-8",
+  "search_path": [
+    {
+      "name": "div",
+      "id": "newsquery"
+    },
+    {
+      "name": "a"
+    }
+  ]
 }
 ```
 
-其中`name`是地名的官方英文(实际上大多是拼音，目前用于log输出)，`Chinese_name`是中文地名(用于发邮件)，`url`是爬取目标的网址，`parser_name`是从目标结点解析出新闻标题与链接的函数名(该部分函数统一编写、管理)，`search_path`是一个从html解析树根部向下找到最新新闻标题的路径(实际路径往往可以压缩到2～3段，设置路径时请自行用BeautifulSoup进行验证)。
+其中`name`是地名的官方英文(实际上大多是拼音，目前用于log输出)，`Chinese_name`是中文地名(用于发邮件)，`url`是爬取目标的网址，`parser_name`是从目标结点解析出新闻标题与链接的函数名(该部分函数统一编写、管理)，`search_path`是一个从html解析树根部向下找到最新新闻标题的路径(实际路径往往可以压缩到2～3段，设置路径时请自行用BeautifulSoup进行验证)，`code`是手动指明网站编码（这是附加项，通常会自动推断，仅当自动推断导致乱码时可以考虑使用这个）。
 
 目前需要将各个网站添加到解析范围中，主要是添加本部分内容。
 
@@ -45,32 +44,39 @@
 
 可以自行实现汇报方法，继承`reporter.BasicReporter`，实现`process(self, messages)`函数即可。
 
-目前提供了`PrintReporter`和`EmailReporter`两个子类，前者会讲更新信息打印到标准输出，后者会根据配置文件(默认为`email.json`)登录163邮箱并发给列表中的目标。
+目前提供了`PrintReporter`、`EmailReporter`和`PointReporter`三个子类：
+
+- `PrintReporter`：会将更新信息打印到标准输出，主要用于配置好json后调试。
+- `EmailReporter`：后者会根据配置文件(默认为`email.json`)登录163邮箱并发给列表中的目标。
+- `PointReport`：点到点的邮件通知，根据配置文件(默认为`point.json`)将每一个爬到的结果定向发给设定的邮箱列表(即可直接写一个字符串作为唯一接收者，也可以写一个列表指定多个接收者)。
 
 ## 当前进度
 
-目前正在陆续添加各个省份的json配置以完成爬取，具体进度见issue。
+目前正在陆续添加各地级市的json配置以完成爬取。
 
-以下网站暂且搁置：
+## FAQ
 
-- 西藏：官方网站未知
+1. 如何设计search_path？
 
-以下网站虽然初步实现了爬取，但是写法可能需要考虑优化：
+   可以使用chrome的检查元素功能查看新闻标题外层包含的tag。但是应当注意这并不代表就能找对结果，一方面从浏览器看到的网页并不一定是get请求直接获得的（应从network里查看直接获取的结果），另一方面可能实际上有些地方有并列相同tag会形成歧义从而找错位置。实际操作时请**务必用Python验证无误后再提交配置**。
 
-- 河南：借助BeautifulSoup和正则在疫情新闻页找时间逆序的第一条
-- 云南：URL中包含一些尚未理解的query string
--  湖北：使用了比上海复杂的反爬，但黄冈卫健委也有湖北疫情消息，因此从黄冈市卫健委爬取，或许有延时
+2. 如果无法设计合理的search_path或者链接与标题不再一个tag怎么办？
 
-以下网站存在一定的反爬设定，不确定解决办法是否可以更好：
+   这种情况属于需要针对解决的情况，可以先将tag定位到一个较小范围，然后写一个parse函数用BeatifulSoup的方法专门解析它。现在在`crawler.parser.py`中已经有了部分解析函数，可以参考`chongqing_parser`。
 
-- 贵州：涉及JavaScript动态生成脚本，但是所需要的字符串均在名称固定的变量中，使用正则暴力匹配
-- 上海：涉及JavaScript生成加密的cookie，使用正则匹配出函数与参数后借用js2py执行得出cookie
-- 江苏：获取主页以绕过新闻页`![CDATA[`结构
-- 天津：获取主页以绕过新闻页`![CDATA[`结构
+3. 遇到`![CDATA[]]`式结构怎么办？
 
-## \*注意\*
+   有时候可以换个网页来避开问题（某些省份新闻索引里有该结构，但是卫健委主页没有）。如果无法避开就先采用2中的办法定位到一个较小范围，再用正则表达式匹配出需要的部分。
 
-上海网站需执行一段javascript脚本才能获取cookie以正常访问，这与本程序框架不兼容，故建议直接将Cookie写到headers中以绕开此问题。我在`crawler.py`的`HEADERS`中添加了一个我从浏览器复制过来的Cookie，但是它应该很快会失效，因此建议每次运行前手动更改一下cookie。
+4. 如果遇到返回结果是JavaScript脚本与网页混编，新闻标题与链接在脚本中怎么办？
+
+   可以考虑先定位到script标签，然后用正则匹配的方法找到目标新闻标题，参考`guizhou_parser`。
+
+5. 如果遇到反爬怎么办？
+
+   反爬情况比较多，能避开尽量避开，例如湖北反爬水准比较高，因此我从黄冈卫健委获取了湖北疫情报告。上海采用了首次get返回javascript脚本生成cookie的办法， 我在架构中特判了它的返回状态码521，用`js2py`模块运行了该部分JS脚本获取cookie并重新get，解决了问题。实际情况可能更为复杂，需要具体情况具体分析，如果无法克服可以上报情况并跳过该目标。
+
+6. （待续）
 
 ## 作者相关
 

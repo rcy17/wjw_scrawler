@@ -88,7 +88,8 @@ class Crawler:
         dump(self.record, open(self.path, 'w', encoding='utf-8'), ensure_ascii=False)
         # If this is not recorded, save and report it
         if result != buffer:
-            self.manager.add_message(self.others['Chinese_name'], result)
+            name = self.others['Chinese_name']
+            self.manager.add_message(name, self.others.get('province', name), result)
 
     def get_task(self, session):
         return asyncio.ensure_future(self.run(session))

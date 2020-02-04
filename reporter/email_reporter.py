@@ -27,24 +27,27 @@ class EmailReporter(BasicReporter):
         # It must exist, or this reporter is senseless
         self.receivers = config['to']
 
+    def send_email(self, server, receiver, source, subject, message):
+        try:
+            # construct a html message
+            msg = MIMEMultipart()
+            msg['From'] = self.account['username']
+            msg['To'] = receiver
+            msg['Subject'] = source + '卫健委：' + subject
+            content = MIMEText(message, 'html', 'utf-8')
+            msg.attach(content)
+            server.send_message(msg)
+            print(f'[{datetime.now()}] Succeed to send email to {receiver}')
+        except Exception as e:
+            print(f'[{datetime.now()}] Failed to send email to {receiver}:', type(e), e)
+
     def process(self, messages):
         server = SMTP_SSL('smtp.163.com')
         server.ehlo()
         server.login(self.account['username'], self.account['password'])
         messages = [(name, msg['title'], f'{name}：<a href={msg["url"]}>{msg["title"]}</a>')
-                    for (name, [msg]) in messages.items()]
+                    for (province, item) in messages.items() for name, msg in item]
         for receiver in self.receivers:
             for source, subject, message in messages:
-                try:
-                    # construct a html message
-                    msg = MIMEMultipart()
-                    msg['From'] = self.account['username']
-                    msg['To'] = receiver
-                    msg['Subject'] = source + '卫健委：' + subject
-                    content = MIMEText(message, 'html', 'utf-8')
-                    msg.attach(content)
-                    server.send_message(msg)
-                    print(f'[{datetime.now()}] Succeed to send email to {receiver}')
-                except Exception as e:
-                    print(f'[{datetime.now()}] Failed to send email to {receiver}:', type(e), e)
+                self.send_email(server, receiver, source, subject, message)
         server.close()

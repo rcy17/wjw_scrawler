@@ -1,0 +1,14 @@
+{
+  "from": {
+    "username": null,
+    "password": null
+  },
+  "to": {
+    "default": [
+      "default@email.com"
+    ],
+    "吉林": [
+      "receiver@any.com"
+    ]
+  }
+}

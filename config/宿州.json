@@ -1,0 +1,16 @@
+{
+    "name": "suzhou",
+    "Chinese_name": "宿州",
+    "province": "安徽",
+    "url": "http://wjw.ahsz.gov.cn/27543920.html",
+    "parser_name": "title_in_text_href_in_attr",
+    "search_path": [
+      {
+        "name": "ul",
+        "class_": "doc_list list-27543920"
+      },
+      {
+        "name": "a"
+      }
+    ]
+  }

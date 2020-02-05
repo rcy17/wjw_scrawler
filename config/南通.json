@@ -1,0 +1,16 @@
+{
+    "name": "nantong",
+    "Chinese_name": "南通",
+    "province": "江苏",
+    "url": "http://www.nantong.gov.cn/ntsrmzf/ntxw/ntxw.html",
+    "parser_name": "title_in_text_href_in_attr",
+    "search_path": [
+      {
+        "name": "ul",
+        "class_": "list-ul"
+      },
+      {
+        "name": "span"
+      }
+    ]
+  }

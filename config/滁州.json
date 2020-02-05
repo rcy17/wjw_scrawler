@@ -1,0 +1,16 @@
+{
+    "name": "chuzhou",
+    "Chinese_name": "滁州",
+    "province": "安徽",
+    "url": "http://wjw.chuzhou.gov.cn/5341652.html",
+    "parser_name": "title_in_text_href_in_attr",
+    "search_path": [
+      {
+        "name": "ul",
+        "class_": "doc_list list-5341652"
+      },
+      {
+        "name": "a"
+      }
+    ]
+  }

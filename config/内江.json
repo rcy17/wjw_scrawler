@@ -1,0 +1,16 @@
+{
+    "name": "neijiang",
+    "Chinese_name": "内江",
+    "province": "安徽",
+    "url": "http://wsj.neijiang.gov.cn/list/%E5%B7%A5%E4%BD%9C%E5%8A%A8%E6%80%81",
+    "parser_name": "title_in_text_href_in_attr",
+    "search_path": [
+      {
+        "name": "ul",
+        "class_": "list14_1"
+      },
+      {
+        "name": "a"
+      }
+    ]
+  }

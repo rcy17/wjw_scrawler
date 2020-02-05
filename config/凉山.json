@@ -1,0 +1,16 @@
+{
+    "name": "liangshan",
+    "Chinese_name": "凉山",
+    "province": "安徽",
+    "url": "http://wjw.lsz.gov.cn/xwzx/zwjwdt/",
+    "parser_name": "title_in_attr_href_in_attr",
+    "search_path": [
+      {
+        "name": "ul",
+        "class_": "news-list mart-10"
+      },
+      {
+        "name": "a"
+      }
+    ]
+}

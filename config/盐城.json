@@ -1,0 +1,16 @@
+{
+    "name": "yancheng",
+    "Chinese_name": "盐城",
+    "province": "江苏",
+    "url": "http://www.yancheng.gov.cn/col/col4/index.html",
+    "parser_name": "title_in_text_href_in_attr",
+    "search_path": [
+      {
+        "name": "ul",
+        "class_": "yw-nr-ul"
+      },
+      {
+        "name": "a"
+      }
+    ]
+  }

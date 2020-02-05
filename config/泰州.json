@@ -1,0 +1,12 @@
+{
+    "name": "taizhou",
+    "Chinese_name": "泰州",
+    "province": "江苏",
+    "url": "http://wjw.taizhou.gov.cn/col/col25808/index.html",
+    "parser_name": "title_in_text_href_in_attr",
+    "search_path": [
+      {
+        "name": "a"
+      }
+    ]
+}

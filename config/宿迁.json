@@ -1,0 +1,16 @@
+{
+    "name": "suqian",
+    "Chinese_name": "宿迁",
+    "province": "江苏",
+    "url": "http://wsj.suqian.gov.cn/swsj/wsyw/list_wz.shtml",
+    "parser_name": "title_in_text_href_in_attr",
+    "search_path": [
+      {
+        "name": "div",
+        "class_": "list_r_lb_h"
+      },
+      {
+        "name": "a"
+      }
+    ]
+}

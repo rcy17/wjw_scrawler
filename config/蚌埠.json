@@ -1,0 +1,16 @@
+{
+    "name": "bengbu",
+    "Chinese_name": "蚌埠",
+    "province": "安徽",
+    "url": "http://wjw.bengbu.gov.cn/",
+    "parser_name": "title_in_text_href_in_attr",
+    "search_path": [
+      {
+        "name": "ul",
+        "class_": "list"
+      },
+      {
+        "name": "a"
+      }
+    ]
+  }

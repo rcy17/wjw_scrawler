@@ -1,0 +1,16 @@
+{
+    "name": "huainan",
+    "Chinese_name": "淮南",
+    "province": "安徽",
+    "url": "http://wjw.huainan.gov.cn/xwzx/tzgg/index.html",
+    "parser_name": "title_in_text_href_in_attr",
+    "search_path": [
+      {
+        "name": "ul",
+        "class_": "doc_list list-12833824"
+      },
+      {
+        "name": "a"
+      }
+    ]
+  }

@@ -1,0 +1,16 @@
+{
+    "name": "bazhong",
+    "Chinese_name": "巴中",
+    "province": "安徽",
+    "url": "http://wsjkw.cnbz.gov.cn/moreList.html?id_minor=7&id_main=4&toName=%E5%85%AC%E5%91%8A%E5%85%AC%E7%A4%BA",
+    "parser_name": "title_in_text_href_in_attr",
+    "search_path": [
+      {
+        "name": "li",
+        "class_": "morelistcss"
+      },
+      {
+        "name": "a"
+      }
+    ]
+  }

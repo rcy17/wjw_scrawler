@@ -1,0 +1,16 @@
+{
+    "name": "Kaifeng",
+    "Chinese_name": "开封",
+    "province": "河南",
+    "url": "http://www.kfwsjsw.gov.cn/news/wsxw/",
+    "parser_name": "title_in_text_href_in_attr",
+    "search_path": [
+      {
+        "name": "ul",
+        "class_": "zxxx_list"
+      },
+      {
+        "name": "a"
+      }
+    ]
+  }

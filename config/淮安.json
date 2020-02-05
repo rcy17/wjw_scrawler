@@ -1,0 +1,16 @@
+{
+    "name": "huaian",
+    "Chinese_name": "淮安",
+    "province": "江苏",
+    "url": "http://www.huaian.gov.cn/col/16655_185673/index.html",
+    "parser_name": "title_in_text_href_in_attr",
+    "search_path": [
+      {
+        "name": "div",
+        "class_": "lb-lb"
+      },
+      {
+        "name": "a"
+      }
+    ]
+  }

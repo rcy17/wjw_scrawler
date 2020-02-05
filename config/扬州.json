@@ -1,0 +1,16 @@
+{
+    "name": "yangzhou",
+    "Chinese_name": "扬州",
+    "province": "江苏",
+    "url": "http://wjw.yangzhou.gov.cn/yzwshjh/ywkd/wjw_list.shtml",
+    "parser_name": "title_in_text_href_in_attr",
+    "search_path": [
+      {
+        "name": "ul",
+        "class_": "item lh jt_dott f14"
+      },
+      {
+        "name": "a"
+      }
+    ]
+  }

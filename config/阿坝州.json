@@ -1,0 +1,16 @@
+{
+    "name": "abazhou",
+    "Chinese_name": "阿坝州",
+    "province": "四川",
+    "url": "http://wjw.abazhou.gov.cn/abwjw/c100004/common_list.shtml",
+    "parser_name": "abazhou_parser",
+    "search_path": [
+      {
+        "name": "ul",
+        "class_": "list-li"
+      },
+      {
+        "name": "a"
+      }
+    ]
+}

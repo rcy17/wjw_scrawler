@@ -1,0 +1,16 @@
+{
+    "name": "zhenjiang",
+    "Chinese_name": "镇江",
+    "province": "江苏",
+    "url": "http://wjw.zhenjiang.gov.cn/",
+    "parser_name": "title_in_text_href_in_attr",
+    "search_path": [
+      {
+        "name": "td",
+        "class_": "lb"
+      },
+      {
+        "name": "a"
+      }
+    ]
+  }

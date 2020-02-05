@@ -1,0 +1,16 @@
+{
+    "name": "guangyuan",
+    "Chinese_name": "广元",
+    "province": "安徽",
+    "url": "http://wsjsw.cngy.gov.cn/",
+    "parser_name": "title_in_text_href_in_attr",
+    "search_path": [
+      {
+        "name": "div",
+        "class_": "id-list"
+      },
+      {
+        "name": "a"
+      }
+    ]
+  }

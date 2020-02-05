@@ -1,7 +1,6 @@
 {
   "name": "Heilongjiang",
   "Chinese_name": "黑龙江",
-  "province": "黑龙江",
   "url": "http://wsjkw.hlj.gov.cn/",
   "parser_name": "title_in_text_href_in_attr",
   "search_path": [

@@ -1,7 +1,6 @@
 {
   "name": "Shanghai",
   "Chinese_name": "辽宁",
-  "province": "辽宁",
   "url": "http://wsjk.ln.gov.cn/wst_wsjskx/",
   "parser_name": "title_in_text_href_in_attr",
   "search_path": [

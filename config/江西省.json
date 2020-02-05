@@ -1,7 +1,6 @@
 {
   "name": "Jiangxi",
   "Chinese_name": "江西",
-  "province": "江西",
   "url": "http://hc.jiangxi.gov.cn/xwzx/wjxw/index.shtml",
   "parser_name": "title_in_attr_href_in_attr",
   "search_path": [

@@ -1,7 +1,6 @@
 {
   "name": "Henan",
   "Chinese_name": "河南",
-  "province": "河南",
   "url": "http://hnwsjsw.gov.cn/channels/854.shtml",
   "parser_name": "henan_parser",
   "search_path": [

@@ -1,7 +1,6 @@
 {
   "name": "Gansu",
   "Chinese_name": "甘肃",
-  "province": "甘肃",
   "url": "http://wsjk.gansu.gov.cn/channel/10910/index.html",
   "parser_name": "title_in_text_href_in_attr",
   "search_path": [

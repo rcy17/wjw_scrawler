@@ -1,7 +1,6 @@
 {
   "name": "Jilin",
   "Chinese_name": "吉林",
-  "province": "吉林",
   "url": "http://wsjkw.jl.gov.cn/xwzx/xwfb/",
   "parser_name": "title_in_text_href_in_attr",
   "search_path": [

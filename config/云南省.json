@@ -1,7 +1,6 @@
 {
   "name": "Yunnan",
   "Chinese_name": "云南",
-  "province": "云南",
   "url": "http://www.pbh.yn.gov.cn/wjwWebsite/web/col?id=UU157976428326282067&cn=xxgzbd&pcn=ztlm&pid=UU145102906505319730",
   "parser_name": "title_in_text_href_in_attr",
   "search_path": [

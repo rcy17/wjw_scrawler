@@ -1,7 +1,6 @@
 {
   "name": "Guangdong",
   "Chinese_name": "广东",
-  "province": "广东",
   "url": "http://wsjkw.gd.gov.cn/zwyw_yqxx/index.html",
   "parser_name": "title_in_attr_href_in_attr",
   "search_path": [

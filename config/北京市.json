@@ -1,7 +1,6 @@
 {
   "name": "Beijing",
   "Chinese_name": "北京",
-  "province": "北京",
   "url": "http://wjw.beijing.gov.cn/xwzx_20031/xwfb/",
   "parser_name": "title_in_attr_href_in_attr",
   "search_path": [

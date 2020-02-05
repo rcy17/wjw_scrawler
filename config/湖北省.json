@@ -1,7 +1,6 @@
 {
   "name": "Hubei",
   "Chinese_name": "湖北",
-  "province": "湖北",
   "url": "http://wjw.hg.gov.cn/",
   "parser_name": "title_in_attr_href_in_attr",
   "remark": "此处实际上是从黄冈市卫健委获取湖北市的消息",
